@@ -1,0 +1,315 @@
+/**
+ * Physical AI Book - Custom Styles
+ * Enhanced UI with animations and visual flair
+ */
+
+/* ============================================
+   CSS VARIABLES
+   ============================================ */
+:root {
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Custom gradients */
+  --gradient-box: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-circle: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --gradient-oval: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --rainbow-gradient: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   KEYFRAME ANIMATIONS
+   ============================================ */
+@keyframes rainbow-text {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(102, 126, 234, 0.5); }
+  50% { box-shadow: 0 0 40px rgba(102, 126, 234, 0.8); }
+}
+
+/* ============================================
+   BOOK TITLE STYLING
+   ============================================ */
+.book-title-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.book-title {
+  font-weight: 900;
+  font-size: 2.5rem;
+  padding: 1.5rem 3rem;
+  background: var(--gradient-box);
+  color: white;
+  border-radius: 50px;
+  box-shadow:
+    0 10px 40px rgba(102, 126, 234, 0.4),
+    0 0 0 4px rgba(255, 255, 255, 0.2);
+  animation: float 3s ease-in-out infinite, pulse-glow 2s ease-in-out infinite;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.book-title-oval {
+  border-radius: 100px;
+  padding: 1.5rem 4rem;
+}
+
+/* ============================================
+   RAINBOW HOVER EFFECT
+   ============================================ */
+.rainbow-hover {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.rainbow-hover:hover {
+  background: var(--rainbow-gradient);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow-text 2s linear infinite, blink 1s ease-in-out infinite;
+}
+
+/* ============================================
+   CHAPTER SHAPE CLASSES
+   ============================================ */
+.chapter-box {
+  background: var(--gradient-box);
+  color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow:
+    0 8px 32px rgba(102, 126, 234, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  font-weight: 700;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chapter-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.5);
+}
+
+.chapter-circle {
+  background: var(--gradient-circle);
+  color: white;
+  padding: 2rem;
+  border-radius: 50%;
+  min-width: 150px;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 8px 32px rgba(240, 147, 251, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  font-weight: 700;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chapter-circle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 40px rgba(240, 147, 251, 0.5);
+}
+
+.chapter-oval {
+  background: var(--gradient-oval);
+  color: white;
+  padding: 1.5rem 3rem;
+  border-radius: 100px;
+  box-shadow:
+    0 8px 32px rgba(79, 172, 254, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  font-weight: 700;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chapter-oval:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(79, 172, 254, 0.5);
+}
+
+/* ============================================
+   TYPOGRAPHY - HEADINGS
+   ============================================ */
+.markdown h1,
+article h1 {
+  font-weight: 800 !important;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 1rem 1.5rem;
+  border-left: 5px solid var(--ifm-color-primary);
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 1.5rem;
+}
+
+.markdown h2,
+article h2 {
+  font-weight: 700 !important;
+  background: rgba(0, 0, 0, 0.03);
+  padding: 0.75rem 1.25rem;
+  border-left: 4px solid var(--ifm-color-primary-light);
+  border-radius: 0 6px 6px 0;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+[data-theme='dark'] .markdown h1,
+[data-theme='dark'] article h1 {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme='dark'] .markdown h2,
+[data-theme='dark'] article h2 {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* ============================================
+   LINK RAINBOW HOVER
+   ============================================ */
+.markdown a,
+article a,
+.menu__link,
+.table-of-contents__link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.markdown a:hover,
+article a:hover,
+.menu__link:hover,
+.table-of-contents__link:hover {
+  background: var(--rainbow-gradient);
+  background-size: 400% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow-text 2s linear infinite;
+}
+
+/* Sidebar specific rainbow effect */
+.menu__link--active {
+  background: var(--gradient-box) !important;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.menu__link:hover {
+  background: var(--rainbow-gradient);
+  background-size: 400% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow-text 1.5s linear infinite;
+}
+
+/* ============================================
+   CHAPTER TITLE FOOTER COMPONENT
+   ============================================ */
+.chapter-title-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.chapter-title-display {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   ADDITIONAL ENHANCEMENTS
+   ============================================ */
+
+/* Code blocks */
+.prism-code {
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Tables */
+table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+table th {
+  background: var(--ifm-color-primary);
+  color: white;
+  font-weight: 700;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid var(--ifm-color-primary);
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.5rem;
+}
+
+[data-theme='dark'] blockquote {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Cards/Admonitions */
+.alert {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Navbar enhancement */
+.navbar__title {
+  font-weight: 800;
+}
+
+.navbar__link:hover {
+  background: var(--rainbow-gradient);
+  background-size: 400% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow-text 2s linear infinite;
+}

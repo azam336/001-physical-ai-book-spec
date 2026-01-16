@@ -1,0 +1,15 @@
+# Physical AI Book - Code Examples Dependencies
+# Install with: pip install -r requirements.txt
+
+# Physics simulation
+pybullet>=3.2.5
+
+# Numerical computing
+numpy>=1.24.0
+
+# Testing
+pytest>=7.0.0
+pytest-cov>=4.0.0
+
+# Type checking (optional)
+mypy>=1.0.0
