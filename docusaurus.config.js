@@ -1,3 +1,5 @@
+
+
 // @ts-check
 import {themes as prismThemes} from 'prism-react-renderer';
 
@@ -11,11 +13,17 @@ const config = {
     v4: true,
   },
 
-  url: 'https://physical-ai-book.github.io',
-  baseUrl: '/',
 
-  organizationName: 'physical-ai-book',
-  projectName: 'physical-ai-book',
+
+    url: 'https://azam336.github.io',
+  baseUrl: '/001-physical-ai-book-spec/',
+  organizationName: 'azam336',
+  projectName: '001-physical-ai-book-spec',
+
+
+
+
+
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
