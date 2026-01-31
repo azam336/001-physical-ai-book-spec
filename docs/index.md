@@ -1,7 +1,7 @@
 ---
 sidebar_position: 0
 title: Introduction to Physical AI
-slug: /
+slug: /topics
 description: Learn to build intelligent systems that interact with the physical world through sensors and actuators
 keywords: [physical ai, embodied ai, robotics, humanoid robots, introduction]
 ---
