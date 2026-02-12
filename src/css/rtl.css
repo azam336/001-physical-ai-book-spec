@@ -1,0 +1,114 @@
+/**
+ * RTL (Right-to-Left) support for Urdu language
+ */
+
+/* Apply RTL direction when html[dir="rtl"] */
+html[dir='rtl'] {
+  text-align: right;
+}
+
+html[dir='rtl'] body {
+  direction: rtl;
+}
+
+/* Flip margins and paddings */
+html[dir='rtl'] .margin-left--md {
+  margin-left: 0 !important;
+  margin-right: var(--ifm-spacing-horizontal);
+}
+
+html[dir='rtl'] .margin-right--md {
+  margin-right: 0 !important;
+  margin-left: var(--ifm-spacing-horizontal);
+}
+
+/* Navbar adjustments */
+html[dir='rtl'] .navbar__items {
+  flex-direction: row-reverse;
+}
+
+html[dir='rtl'] .navbar__item {
+  text-align: right;
+}
+
+/* Sidebar adjustments */
+html[dir='rtl'] .theme-doc-sidebar-container {
+  border-right: none;
+  border-left: 1px solid var(--ifm-toc-border-color);
+}
+
+html[dir='rtl'] .menu__list {
+  text-align: right;
+}
+
+html[dir='rtl'] .menu__link {
+  text-align: right;
+}
+
+/* Content adjustments */
+html[dir='rtl'] .markdown {
+  text-align: right;
+}
+
+html[dir='rtl'] .markdown h1,
+html[dir='rtl'] .markdown h2,
+html[dir='rtl'] .markdown h3,
+html[dir='rtl'] .markdown h4,
+html[dir='rtl'] .markdown h5,
+html[dir='rtl'] .markdown h6 {
+  text-align: right;
+}
+
+html[dir='rtl'] .markdown ul,
+html[dir='rtl'] .markdown ol {
+  padding-right: 1.5rem;
+  padding-left: 0;
+}
+
+/* Code blocks - keep LTR for code */
+html[dir='rtl'] pre,
+html[dir='rtl'] code {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Breadcrumbs */
+html[dir='rtl'] .breadcrumbs__item::before {
+  transform: rotate(180deg);
+}
+
+/* Pagination */
+html[dir='rtl'] .pagination-nav {
+  flex-direction: row-reverse;
+}
+
+html[dir='rtl'] .pagination-nav__link--prev {
+  text-align: right;
+}
+
+html[dir='rtl'] .pagination-nav__link--next {
+  text-align: left;
+}
+
+/* Table of Contents */
+html[dir='rtl'] .table-of-contents {
+  text-align: right;
+}
+
+html[dir='rtl'] .table-of-contents__link {
+  text-align: right;
+}
+
+/* Footer */
+html[dir='rtl'] .footer {
+  text-align: right;
+}
+
+html[dir='rtl'] .footer__links {
+  text-align: right;
+}
+
+/* Smooth transition when switching languages */
+html {
+  transition: direction 0.3s ease;
+}

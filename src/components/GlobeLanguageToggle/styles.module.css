@@ -1,0 +1,58 @@
+.globeButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  background: var(--ifm-navbar-background-color);
+  color: var(--ifm-navbar-link-color);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.globeButton:hover {
+  background: var(--ifm-color-emphasis-100);
+  border-color: var(--ifm-color-emphasis-400);
+  transform: translateY(-1px);
+}
+
+.globeButton:active {
+  transform: translateY(0);
+}
+
+.globeIcon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.langText {
+  font-size: 14px;
+  line-height: 1;
+  min-width: 50px;
+  text-align: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 996px) {
+  .globeButton {
+    padding: 8px 12px;
+  }
+
+  .langText {
+    min-width: 45px;
+  }
+}
+
+/* Dark mode support */
+[data-theme='dark'] .globeButton {
+  border-color: var(--ifm-color-emphasis-200);
+}
+
+[data-theme='dark'] .globeButton:hover {
+  background: var(--ifm-color-emphasis-200);
+  border-color: var(--ifm-color-emphasis-300);
+}

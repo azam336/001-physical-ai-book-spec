@@ -46,6 +46,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          path: 'docs',
           routeBasePath: '/',
           editUrl: 'https://github.com/physical-ai-book/physical-ai-book/tree/main/',
         },

@@ -1,0 +1,19 @@
+.languageToggleContainer {
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+}
+
+/* Place after Glossary in the navbar */
+@media (min-width: 997px) {
+  .languageToggleContainer {
+    order: 1; /* Appears after left items but before right items */
+  }
+}
+
+/* Mobile view */
+@media (max-width: 996px) {
+  .languageToggleContainer {
+    margin: 8px 0;
+  }
+}
