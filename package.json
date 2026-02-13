@@ -1,13 +1,9 @@
-
 {
   "name": "001-physical-ai-book-spec",
   "version": "0.0.0",
-"engines":{
-"node": ">=20.0.0"
+  "engines": {
+    "node": ">=20.0"
   },
-
-
-
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -32,7 +28,8 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.9.2",
-    "@docusaurus/types": "3.9.2"
+    "@docusaurus/types": "3.9.2",
+    "gh-pages": "^6.3.0"
   },
   "browserslist": {
     "production": [
@@ -45,8 +42,5 @@
       "last 3 firefox version",
       "last 5 safari version"
     ]
-  },
-  "engines": {
-    "node": ">=20.0"
   }
 }

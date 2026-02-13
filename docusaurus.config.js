@@ -1,5 +1,3 @@
-
-
 // @ts-check
 import {themes as prismThemes} from 'prism-react-renderer';
 
@@ -13,12 +11,12 @@ const config = {
     v4: true,
   },
 
-
-
-    url: 'https://azam336.github.io',
+  url: 'https://azam336.github.io',
   baseUrl: '/001-physical-ai-book-spec/',
   organizationName: 'azam336',
   projectName: '001-physical-ai-book-spec',
+  deploymentBranch: 'gh-pages',
+  trailingSlash: false,
 
 
 
@@ -48,7 +46,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           path: 'docs',
           routeBasePath: '/',
-          editUrl: 'https://github.com/physical-ai-book/physical-ai-book/tree/main/',
+          editUrl: 'https://github.com/azam336/001-physical-ai-book-spec/tree/main/',
         },
         blog: false,
         theme: {
@@ -86,7 +84,7 @@ const config = {
             position: 'left',
           },
           {
-            href: 'https://github.com/physical-ai-book/physical-ai-book',
+            href: 'https://github.com/azam336/001-physical-ai-book-spec',
             label: 'GitHub',
             position: 'right',
           },
@@ -117,7 +115,7 @@ const config = {
             items: [
               {
                 label: 'GitHub Discussions',
-                href: 'https://github.com/physical-ai-book/physical-ai-book/discussions',
+                href: 'https://github.com/azam336/001-physical-ai-book-spec/discussions',
               },
               {
                 label: 'Contributing',
