@@ -9,6 +9,9 @@ function generateSessionId() {
 }
 
 function getOrCreateSessionId() {
+  if (typeof window === 'undefined') {
+    return generateSessionId();
+  }
   let sessionId = sessionStorage.getItem('chatbot_session_id');
   if (!sessionId) {
     sessionId = generateSessionId();
