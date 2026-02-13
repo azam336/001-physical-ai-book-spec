@@ -32,7 +32,7 @@ export default function Login() {
         history.push(redirectTo);
       } else {
         // Default redirect to home or first book page
-        history.push('/001-physical-ai-book-spec/');
+        history.push('/');
       }
     }
   }, [isAuthenticated, history]);
@@ -78,7 +78,7 @@ export default function Login() {
       } else {
         // Fallback to query param or home
         const params = new URLSearchParams(window.location.search);
-        const redirectTo = params.get('redirect') || '/001-physical-ai-book-spec/';
+        const redirectTo = params.get('redirect') || '/';
         history.push(redirectTo);
       }
     } else {
@@ -151,7 +151,7 @@ export default function Login() {
                 <span className="error-message">{errors.password}</span>
               )}
               <div style={{ textAlign: 'right', marginTop: '8px' }}>
-                <Link to="/001-physical-ai-book-spec/forgot-password" className="auth-link">
+                <Link to="/forgot-password" className="auth-link">
                   Forgot Password?
                 </Link>
               </div>
@@ -168,7 +168,7 @@ export default function Login() {
 
           <div className="auth-footer">
             Don't have an account?{' '}
-            <Link to="/001-physical-ai-book-spec/register">Register here</Link>
+            <Link to="/register">Register here</Link>
           </div>
         </div>
       </div>

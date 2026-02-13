@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
-import { Redirect, useLocation, useHistory } from '@docusaurus/router';
+import React from 'react';
+import { Redirect, useLocation } from '@docusaurus/router';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import { useAuth } from '../contexts/AuthContext';
 
 /**
@@ -11,7 +12,7 @@ import { useAuth } from '../contexts/AuthContext';
 export default function ProtectedRoute({ children }) {
   const { isAuthenticated, isLoading } = useAuth();
   const location = useLocation();
-  const history = useHistory();
+  const loginUrl = useBaseUrl('/login');
 
   // Loading state - show while checking authentication
   if (isLoading) {
@@ -44,11 +45,11 @@ export default function ProtectedRoute({ children }) {
 
     // Redirect to login
     if (typeof window !== 'undefined') {
-      window.location.href = '/001-physical-ai-book-spec/login';
+      window.location.href = loginUrl;
       return null;
     }
 
-    return <Redirect to="/001-physical-ai-book-spec/login" />;
+    return <Redirect to={loginUrl} />;
   }
 
   // Authenticated - render protected content

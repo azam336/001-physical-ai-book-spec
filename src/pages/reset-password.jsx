@@ -72,7 +72,7 @@ export default function ResetPassword() {
 
         // Redirect to login after 2 seconds
         setTimeout(() => {
-          navigate('/001-physical-ai-book-spec/login');
+          navigate('/login');
         }, 2000);
       } else {
         setMessage({
@@ -101,7 +101,7 @@ export default function ResetPassword() {
               <p>Invalid reset link. Please request a new password reset.</p>
             </div>
             <div className="auth-footer">
-              <Link to="/001-physical-ai-book-spec/forgot-password" className="auth-link">
+              <Link to="/forgot-password" className="auth-link">
                 Request Password Reset
               </Link>
             </div>
@@ -168,7 +168,7 @@ export default function ResetPassword() {
           </form>
 
           <div className="auth-footer">
-            <Link to="/001-physical-ai-book-spec/login" className="auth-link">
+            <Link to="/login" className="auth-link">
               Back to Login
             </Link>
           </div>

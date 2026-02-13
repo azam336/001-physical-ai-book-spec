@@ -11,8 +11,10 @@ const config = {
     v4: true,
   },
 
-  url: 'https://azam336.github.io',
-  baseUrl: '/001-physical-ai-book-spec/',
+  url: process.env.VERCEL
+    ? 'https://001-physical-ai-book-spec.vercel.app'
+    : 'https://azam336.github.io',
+  baseUrl: process.env.VERCEL ? '/' : '/001-physical-ai-book-spec/',
   organizationName: 'azam336',
   projectName: '001-physical-ai-book-spec',
   deploymentBranch: 'gh-pages',

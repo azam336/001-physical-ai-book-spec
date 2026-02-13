@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '@theme-original/DocItem/Layout';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import ProtectedRoute from '../../../components/ProtectedRoute';
 import { useLanguage } from '../../../contexts/LanguageContext';
 import urduContent from '../../../content/urdu/chapters';
@@ -8,10 +9,11 @@ import clsx from 'clsx';
 
 export default function DocItemLayout(props) {
   const { lang } = useLanguage();
+  const { siteConfig } = useDocusaurusContext();
   const currentPath = typeof window !== 'undefined' ? window.location.pathname : '';
 
-  // Extract route path (remove base URL)
-  const basePath = '/001-physical-ai-book-spec';
+  // Extract route path (remove base URL dynamically)
+  const basePath = siteConfig.baseUrl.replace(/\/$/, '');
   const routePath = currentPath.replace(basePath, '') || '/';
 
   // Check if Urdu content exists for this route

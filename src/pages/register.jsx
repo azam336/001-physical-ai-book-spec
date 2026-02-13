@@ -33,7 +33,7 @@ export default function Register() {
         sessionStorage.removeItem('auth_redirect');
         history.push(redirectTo);
       } else {
-        history.push('/001-physical-ai-book-spec/');
+        history.push('/');
       }
     }
   }, [isAuthenticated, history]);
@@ -100,7 +100,7 @@ export default function Register() {
         ? sessionStorage.getItem('auth_redirect')
         : null;
 
-      const redirectPath = savedRedirect || '/001-physical-ai-book-spec/';
+      const redirectPath = savedRedirect || '/';
 
       // Clear redirect if it exists
       if (savedRedirect && typeof window !== 'undefined') {
@@ -232,7 +232,7 @@ export default function Register() {
 
           <div className="auth-footer">
             Already have an account?{' '}
-            <Link to="/001-physical-ai-book-spec/login">Login here</Link>
+            <Link to="/login">Login here</Link>
           </div>
         </div>
       </div>

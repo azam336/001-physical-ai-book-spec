@@ -39,7 +39,7 @@ export default function VerifyEmail() {
 
           // Redirect to login after 3 seconds
           setTimeout(() => {
-            history.push('/001-physical-ai-book-spec/login');
+            history.push('/login');
           }, 3000);
         } else {
           setStatus('error');
@@ -79,11 +79,11 @@ export default function VerifyEmail() {
               <h2>✗ Verification Failed</h2>
               <p>{message}</p>
               <div style={{ marginTop: '20px' }}>
-                <Link to="/001-physical-ai-book-spec/login" className="auth-link">
+                <Link to="/login" className="auth-link">
                   Return to Login
                 </Link>
                 {' | '}
-                <Link to="/001-physical-ai-book-spec/register" className="auth-link">
+                <Link to="/register" className="auth-link">
                   Register Again
                 </Link>
               </div>

@@ -91,11 +91,11 @@ export default function ForgotPassword() {
           </form>
 
           <div className="auth-footer">
-            <Link to="/001-physical-ai-book-spec/login" className="auth-link">
+            <Link to="/login" className="auth-link">
               Back to Login
             </Link>
             <span className="auth-separator">|</span>
-            <Link to="/001-physical-ai-book-spec/register" className="auth-link">
+            <Link to="/register" className="auth-link">
               Create Account
             </Link>
           </div>
